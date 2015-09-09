@@ -50,9 +50,9 @@
 		CIFilter *colorFilter = [CIFilter filterWithName:@"CIColorControls"];
 
 		[colorFilter setValue:[colorGenerator valueForKey:kCIOutputImageKey] forKey:kCIInputImageKey];
-		[colorFilter setValue:[NSNumber numberWithFloat:3.0] forKey:kCIInputSaturationKey];
-		[colorFilter setValue:[NSNumber numberWithFloat:0.35] forKey:kCIInputBrightnessKey];
-		[colorFilter setValue:[NSNumber numberWithFloat:1.0] forKey:kCIInputContrastKey];
+		[colorFilter setValue:@3.0 forKey:kCIInputSaturationKey];
+		[colorFilter setValue:@0.35 forKey:kCIInputBrightnessKey];
+		[colorFilter setValue:@1.0 forKey:kCIInputContrastKey];
 
 		CIFilter *monochromeFilter = [CIFilter filterWithName:@"CIColorMonochrome"];
 		CIImage *baseImage = [CIImage imageWithData:[self TIFFRepresentation]];
